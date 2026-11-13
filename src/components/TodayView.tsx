@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { dayById, formatDate, hitTopOfRange, isLiftDay, lastLog, nextDayId, nextLiftDate, program, topSet } from '../logic'
-import type { Session } from '../types'
+import { WEEKDAY_LABEL, type Session } from '../types'
 
 interface Props {
   sessions: Session[]
@@ -45,7 +45,11 @@ export function TodayView({ sessions, onStart, onLogCardio }: Props) {
       )}
 
       <section className="days-picker" aria-label="Program days">
-        <h2 className="section-title">Lift days</h2>
+        <h2 className="section-title">Workout days</h2>
+        <p className="muted small days-help">
+          You rotate through {program.days.length} workouts — {program.days.map((d) => d.name).join(', ')} — on{' '}
+          {program.liftDays.map((d) => WEEKDAY_LABEL[d]).join(' / ')}. Tap one to see what's in it.
+        </p>
         <div className="day-tabs" role="tablist">
           {program.days.map((d) => {
             const last = lastOf(d.id)
@@ -57,10 +61,13 @@ export function TodayView({ sessions, onStart, onLogCardio }: Props) {
                 className="day-tab"
                 onClick={() => setSelected(d.id)}
               >
-                {d.id === nextId && <span className="day-next">Next</span>}
+                {d.id === nextId && <span className="day-next">Up next</span>}
+                <span className="day-word">Day</span>
                 <span className="day-letter">{d.id}</span>
-                <span className="day-focus">{d.focus}</span>
-                <span className="day-last">{last ? formatDate(last.startedAt, { month: 'short', day: 'numeric' }) : '—'}</span>
+                <span className="day-focus">{d.focus} day</span>
+                <span className="day-last">
+                  {last ? `Last: ${formatDate(last.startedAt, { month: 'short', day: 'numeric' })}` : 'Not done yet'}
+                </span>
               </button>
             )
           })}
@@ -95,7 +102,10 @@ function Preview({ dayId, sessions }: { dayId: string; sessions: Session[] }) {
         if (b.type === 'superset') ss++
         return (
           <li key={i} className={`preview-${b.type}`}>
-            <span className="preview-tag">{b.type === 'main' ? 'Main' : `SS${ss}`}</span>
+            <span className="preview-tag">
+              {b.type === 'main' ? 'Main lift' : `Superset ${ss}`}
+              {b.type === 'superset' && <span className="preview-hint"> · alternate these two</span>}
+            </span>
             <span className="preview-list">
               {b.exercises.map((e) => {
                 const last = lastLog(sessions, e.id, 'gym')
