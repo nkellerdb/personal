@@ -110,8 +110,26 @@ main {
 .preview-superset { border-left: 3px solid var(--ss) !important; }
 .preview-superset .preview-tag { background: var(--ss-soft); color: var(--ss); }
 .preview-ex .muted { font-size: 0.85rem; margin-left: 4px; }
-.other-day summary { color: var(--muted); padding: 8px 0; text-align: center; }
-.other-day .row { margin-top: 6px; }
+.preview-list { flex: 1; min-width: 0; }
+.preview-ex { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.preview-last { font-weight: 700; font-size: 0.9rem; white-space: nowrap; }
+
+.days-picker .section-title { margin: 4px 0 8px; }
+.day-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.day-tab {
+  position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 14px 6px 10px; border-radius: 16px; border: 1px solid var(--line); background: var(--surface);
+}
+.day-letter { font-size: 1.9rem; font-weight: 800; line-height: 1; }
+.day-focus { font-weight: 600; font-size: 0.88rem; }
+.day-last { font-size: 0.75rem; color: var(--muted); }
+.day-tab[aria-selected='true'] { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
+.day-tab[aria-selected='true'] .day-last { color: inherit; opacity: 0.7; }
+.day-next {
+  position: absolute; top: -8px; left: 50%; transform: translateX(-50%);
+  font-size: 0.62rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+  background: var(--text); color: var(--bg); padding: 2px 7px; border-radius: 999px;
+}
 
 /* ---------- Workout ---------- */
 .workout-bar { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; margin-bottom: 10px; }
