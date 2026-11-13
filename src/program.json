@@ -1,0 +1,228 @@
+{
+  "name": "3-Day Full Body",
+  "rotation": ["A", "B", "C"],
+  "liftDays": ["mon", "wed", "fri"],
+  "rest": { "main": 120, "superset": 90 },
+  "cardio": {
+    "title": "Walk / bike day",
+    "description": "30–45 min easy walk or bike at a conversational pace. Optional: 5 min of mobility afterwards."
+  },
+  "days": [
+    {
+      "id": "A",
+      "name": "Day A",
+      "focus": "Squat",
+      "blocks": [
+        {
+          "type": "main",
+          "exercises": [
+            {
+              "id": "squat",
+              "name": "Squat",
+              "sets": 3,
+              "repRange": [5, 8],
+              "gym": "Barbell back squat",
+              "home": "Goblet squat (heavy dumbbell or kettlebell)",
+              "cues": ["Brace before you descend", "Knees track over toes", "Hips and chest rise together"],
+              "demo": { "file": "squat.mp4", "youtube": "https://www.youtube.com/results?search_query=barbell+back+squat+form" }
+            }
+          ]
+        },
+        {
+          "type": "superset",
+          "exercises": [
+            {
+              "id": "incline-db-press",
+              "name": "Incline Press",
+              "sets": 3,
+              "repRange": [8, 12],
+              "gym": "Incline dumbbell press",
+              "home": "Feet-elevated push-up",
+              "cues": ["Shoulder blades pinned back", "Lower to upper chest", "Elbows ~45° from torso"],
+              "demo": { "youtube": "https://www.youtube.com/results?search_query=incline+dumbbell+press+form" }
+            },
+            {
+              "id": "chest-supported-row",
+              "name": "Row",
+              "sets": 3,
+              "repRange": [8, 12],
+              "gym": "Chest-supported dumbbell row",
+              "home": "One-arm dumbbell row",
+              "cues": ["Pull elbow to hip", "Pause and squeeze at the top", "No torso swing"],
+              "demo": { "youtube": "https://www.youtube.com/results?search_query=chest+supported+dumbbell+row+form" }
+            }
+          ]
+        },
+        {
+          "type": "superset",
+          "exercises": [
+            {
+              "id": "rdl",
+              "name": "Romanian Deadlift",
+              "sets": 3,
+              "repRange": [8, 12],
+              "gym": "Barbell Romanian deadlift",
+              "home": "Dumbbell Romanian deadlift",
+              "cues": ["Soft knees, push hips back", "Bar stays close to legs", "Stop when hamstrings are stretched"],
+              "demo": { "youtube": "https://www.youtube.com/results?search_query=romanian+deadlift+form" }
+            },
+            {
+              "id": "lateral-raise",
+              "name": "Lateral Raise",
+              "sets": 3,
+              "repRange": [12, 15],
+              "gym": "Cable lateral raise",
+              "home": "Dumbbell lateral raise",
+              "cues": ["Lead with elbows", "Raise to shoulder height", "Control the way down"],
+              "demo": { "youtube": "https://www.youtube.com/results?search_query=lateral+raise+form" }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "name": "Day B",
+      "focus": "Deadlift",
+      "blocks": [
+        {
+          "type": "main",
+          "exercises": [
+            {
+              "id": "deadlift",
+              "name": "Deadlift",
+              "sets": 3,
+              "repRange": [4, 6],
+              "gym": "Trap bar deadlift",
+              "home": "Dumbbell deadlift",
+              "cues": ["Take the slack out of the bar", "Push the floor away", "Lock out with glutes, not lower back"],
+              "demo": { "youtube": "https://www.youtube.com/results?search_query=trap+bar+deadlift+form" }
+            }
+          ]
+        },
+        {
+          "type": "superset",
+          "exercises": [
+            {
+              "id": "overhead-press",
+              "name": "Overhead Press",
+              "sets": 3,
+              "repRange": [6, 10],
+              "gym": "Standing barbell overhead press",
+              "home": "Seated dumbbell shoulder press",
+              "cues": ["Squeeze glutes, ribs down", "Head through once bar passes face", "Press straight up"],
+              "demo": { "youtube": "https://www.youtube.com/results?search_query=overhead+press+form" }
+            },
+            {
+              "id": "lat-pulldown",
+              "name": "Pulldown",
+              "sets": 3,
+              "repRange": [8, 12],
+              "gym": "Lat pulldown",
+              "home": "Band pulldown or pull-up",
+              "cues": ["Pull elbows down and in", "Chest up toward the bar", "Full stretch at top"],
+              "demo": { "youtube": "https://www.youtube.com/results?search_query=lat+pulldown+form" }
+            }
+          ]
+        },
+        {
+          "type": "superset",
+          "exercises": [
+            {
+              "id": "split-squat",
+              "name": "Split Squat",
+              "sets": 3,
+              "repRange": [8, 12],
+              "gym": "Dumbbell Bulgarian split squat",
+              "home": "Bulgarian split squat (bodyweight or DB)",
+              "cues": ["Most weight on front foot", "Back knee straight down", "Reps are per leg"],
+              "demo": { "youtube": "https://www.youtube.com/results?search_query=bulgarian+split+squat+form" }
+            },
+            {
+              "id": "knee-raise",
+              "name": "Knee Raise",
+              "sets": 3,
+              "repRange": [10, 15],
+              "gym": "Hanging knee raise",
+              "home": "Lying leg raise",
+              "cues": ["Curl the pelvis up", "No swinging", "Slow on the way down"],
+              "demo": { "youtube": "https://www.youtube.com/results?search_query=hanging+knee+raise+form" }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "name": "Day C",
+      "focus": "Bench",
+      "blocks": [
+        {
+          "type": "main",
+          "exercises": [
+            {
+              "id": "bench-press",
+              "name": "Bench Press",
+              "sets": 3,
+              "repRange": [5, 8],
+              "gym": "Barbell bench press",
+              "home": "Dumbbell floor press",
+              "cues": ["Feet planted, slight arch", "Touch mid-chest", "Drive bar back over shoulders"],
+              "demo": { "youtube": "https://www.youtube.com/results?search_query=bench+press+form" }
+            }
+          ]
+        },
+        {
+          "type": "superset",
+          "exercises": [
+            {
+              "id": "leg-press",
+              "name": "Leg Press",
+              "sets": 3,
+              "repRange": [10, 12],
+              "gym": "Leg press",
+              "home": "Dumbbell step-up",
+              "cues": ["Full foot on platform", "Lower until hips start to tuck", "Don't lock knees hard"],
+              "demo": { "youtube": "https://www.youtube.com/results?search_query=leg+press+form" }
+            },
+            {
+              "id": "cable-row",
+              "name": "Seated Row",
+              "sets": 3,
+              "repRange": [8, 12],
+              "gym": "Seated cable row",
+              "home": "Band seated row",
+              "cues": ["Tall chest", "Pull handle to belly button", "Let shoulders reach forward at stretch"],
+              "demo": { "youtube": "https://www.youtube.com/results?search_query=seated+cable+row+form" }
+            }
+          ]
+        },
+        {
+          "type": "superset",
+          "exercises": [
+            {
+              "id": "hip-thrust",
+              "name": "Hip Thrust",
+              "sets": 3,
+              "repRange": [8, 12],
+              "gym": "Barbell hip thrust",
+              "home": "Single-leg glute bridge",
+              "cues": ["Chin tucked, ribs down", "Shins vertical at top", "Pause 1 sec at lockout"],
+              "demo": { "youtube": "https://www.youtube.com/results?search_query=hip+thrust+form" }
+            },
+            {
+              "id": "face-pull",
+              "name": "Face Pull",
+              "sets": 3,
+              "repRange": [12, 15],
+              "gym": "Cable face pull",
+              "home": "Band pull-apart",
+              "cues": ["Pull to eyebrows", "Thumbs point back at the end", "Elbows high"],
+              "demo": { "youtube": "https://www.youtube.com/results?search_query=face+pull+form" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
